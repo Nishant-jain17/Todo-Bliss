@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0f22;
+  padding: 10px;
+}
+.todo {
+  width: 100%;
+  max-width: 540px;
+  background: #1d2233;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todo h2 {
+  color: #f0f4f8;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.todo img {
+  width: 40px;
+  height: auto;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3a3a55;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  color: #ffffff;
+}
+input::placeholder {
+  color: #b5b5b5;
+}
+.row button {
+  border: 2px solid #56b2bb;
+  outline: none;
+  padding: 16px 40px;
+  background: transparent;
+  color: #10c5d5;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  color: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  word-break: break-word;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/images/unchecked.png);
+  background-position: center;
+  background-size: cover;
+  top: 12px;
+  left: 8px;
+  background-color: #c5c5c5;
+}
+ul li.checked {
+  color: #909090;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(images/images/checked.png);
+}
+ul li span {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 35%;
+  margin-left: 2px;
+}
+
+ul li span:hover {
+  background: #484868;
+}
+
+@media (min-width: 320px) {
+  .row {
+    padding: 0;
+  }
+  .row button {
+    padding: 10px 24px;
+  }
+}
