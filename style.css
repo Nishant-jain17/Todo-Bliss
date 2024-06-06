@@ -7,7 +7,22 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background: #0a0f22;
+  background-image: linear-gradient(
+      45deg,
+      rgba(187, 187, 187, 0.04) 0%,
+      rgba(187, 187, 187, 0.04) 50%,
+      rgba(86, 86, 86, 0.04) 50%,
+      rgba(86, 86, 86, 0.04) 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(166, 166, 166, 0.04) 0%,
+      rgba(166, 166, 166, 0.04) 50%,
+      rgba(92, 92, 92, 0.04) 50%,
+      rgba(92, 92, 92, 0.04) 100%
+    ),
+    linear-gradient(90deg, rgb(20, 20, 20), rgb(20, 20, 20));
+  background-size: 142px 142px;
   padding: 10px;
 }
 .todo {
@@ -17,9 +32,11 @@
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 10px;
+  border: 2px solid #f0a500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .todo h2 {
-  color: #f0f4f8;
+  color: #ffd700;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -46,6 +63,8 @@ input {
   background: transparent;
   padding: 10px;
   color: #ffffff;
+  padding-left: 24px;
+  letter-spacing: 1px;
 }
 input::placeholder {
   color: #b5b5b5;
@@ -67,7 +86,7 @@ ul li {
   user-select: none;
   cursor: pointer;
   position: relative;
-  color: #f0f4f8;
+  color: #ffd700;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,7 +98,7 @@ ul li::before {
   height: 28px;
   width: 28px;
   border-radius: 50%;
-  background-image: url(unchecked.png);
+  background-image: url(images/images/unchecked.png);
   background-position: center;
   background-size: cover;
   top: 12px;
@@ -91,7 +110,7 @@ ul li.checked {
   text-decoration: line-through;
 }
 ul li.checked::before {
-  background-image: url(checked.png);
+  background-image: url(images/images/checked.png);
 }
 ul li span {
   width: 40px;
@@ -105,7 +124,7 @@ ul li span {
 }
 
 ul li span:hover {
-  background: #484868;
+  background: #ffd700;
 }
 
 @media (min-width: 320px) {
